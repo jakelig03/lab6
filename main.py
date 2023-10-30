@@ -7,7 +7,7 @@ def function():
 
 def encoder(password):
     result = ''
-    for char in norm_pass:
+    for char in password:
         char = int(char) + 3
         if char >= 10:
             char -= 10
@@ -17,10 +17,10 @@ def encoder(password):
 # Wilson, Damian - changes begin here (added decoder)
 def decoder(password):
     result = ''
-    for char in norm_pass:
+    for char in password:
         char = int(char) - 3
-        if char >= 10:
-            char -= 10
+        if char < 0:
+            char += 10
         result += str(char)
     return result
 
