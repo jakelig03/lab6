@@ -10,6 +10,13 @@ def function():
 # def encode():
 
 # def decode():
+# Wilson, Damian - edits start here (filling in decode)
+def decode(message):
+    result = ''
+    for digit in message:
+        new_digit = str((int(digit) - 3) % 10)
+        result += new_digit
+    return result
 
 if __name__ == '__main__':
     norm_pass = None
